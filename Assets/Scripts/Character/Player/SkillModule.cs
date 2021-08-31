@@ -30,7 +30,6 @@ namespace Character.Player
 
         public void IncreaseScaleMultiplier()
         {
-            Debug.Log(_scaleMultiplier);
             _scaleMultiplier += _scaleMultiplier * Time.deltaTime;
         }
 

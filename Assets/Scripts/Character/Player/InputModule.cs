@@ -20,6 +20,7 @@ namespace Character.Player
         {
             _movementModule = GetComponent<MovementModule>();
             _skillModule = GetComponent<SkillModule>();
+            
         }
 
         private void Update()

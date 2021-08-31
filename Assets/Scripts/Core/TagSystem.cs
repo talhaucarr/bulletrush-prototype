@@ -12,6 +12,7 @@ namespace Core
         None,
         Bullet,
         Skill,
+        Body,
     }
     public class TagSystem : MonoBehaviour
     {

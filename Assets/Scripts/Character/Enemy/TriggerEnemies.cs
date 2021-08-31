@@ -5,29 +5,33 @@ using UnityEngine.AI;
 using Core;
 using Character.Enemy;
 
-public class TriggerEnemies : MonoBehaviour
+namespace Character.Enemy
 {
-    [SerializeField] private GameObject[] enemies;
-
-    private BoxCollider _collider;
-
-    private void Start()
+    public class TriggerEnemies : MonoBehaviour
     {
-        _collider = GetComponent<BoxCollider>();
-    }
+        [SerializeField] private GameObject[] enemies;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        _collider.enabled = false;
-        if(other.gameObject.GetComponent<TagSystem>().Tags.Contains(Tags.Player))
-            TriggerAllEnemies();
-    }
+        private BoxCollider _collider;
 
-    private void TriggerAllEnemies()
-    {
-        foreach (var enemy in enemies)
+        private void Start()
         {
-            enemy.GetComponent<AIController>().enabled = true;
+            _collider = GetComponent<BoxCollider>();
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            _collider.enabled = false;
+            if(other.gameObject.GetComponent<TagSystem>().Tags.Contains(Tags.Player))
+                TriggerAllEnemies();
+        }
+
+        private void TriggerAllEnemies()
+        {
+            foreach (var enemy in enemies)
+            {
+                enemy.GetComponent<AIController>().enabled = true;
+            }
         }
     }
 }
+

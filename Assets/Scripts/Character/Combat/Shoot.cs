@@ -20,9 +20,9 @@ namespace Character.Combat
 
         private void Update()
         {
-            if(EnemyManager.Instance.AreEnemiesDead())
+            if (EnemyManager.Instance.AreEnemiesDead())
                 return;
-            
+          
             _targetedEnemy = EnemyManager.Instance.ClosestTarget(transform.position, 0);
             
             transform.LookAt(_targetedEnemy.position + -1 * Vector3.right * _targetedEnemy.GetComponent<CapsuleCollider>().height / 2);
@@ -31,6 +31,8 @@ namespace Character.Combat
             if (_allowFire)
                 StartShoot();
         }
+
+
 
         public void StartShoot()
         {

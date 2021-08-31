@@ -11,6 +11,7 @@ namespace Character.Enemy
         private void Awake()
         {
             EnemyManager.Instance.Enemies.Add(transform);   
+            
         }
     }
 }

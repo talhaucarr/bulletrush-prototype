@@ -24,13 +24,16 @@ namespace Managers
         public void DeathEnemy(Transform currentEnemy)
         {
             Enemies.Remove(currentEnemy);
+            UIManager.Instance.SetEnemyCounterText(Enemies.Count.ToString());
             Destroy(currentEnemy.gameObject);
         }
 
         public bool AreEnemiesDead()
         {
             return Enemies.Count == 0;
-        } 
+        }
+        
+        
         
     }
 }
