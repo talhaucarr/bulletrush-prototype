@@ -303,7 +303,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5093885168693461828}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b769bb614bc1e7040936d9194e92f5fa, type: 3}
   m_Name: 
@@ -312,6 +312,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1407074524288474152, guid: 3bed594ec9da78b4fa8691a3310584dc, type: 3}
   bulletSpeed: 30
   fireRate: 0.3
+  attackRange: 25
 --- !u!114 &2566642790954253295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -431,7 +432,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5099607370190499170}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b769bb614bc1e7040936d9194e92f5fa, type: 3}
   m_Name: 
@@ -440,6 +441,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1407074524288474152, guid: 3bed594ec9da78b4fa8691a3310584dc, type: 3}
   bulletSpeed: 30
   fireRate: 0.1
+  attackRange: 25
 --- !u!114 &6164373765709328319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -614,7 +616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphere: {fileID: 1882801289}
-  skillSpeed: 1
+  skillSpeed: 0.3
 --- !u!1 &7138700730552829918
 GameObject:
   m_ObjectHideFlags: 0

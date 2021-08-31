@@ -20,6 +20,9 @@ namespace Character.Enemy
         
         private void Update()
         {
+            if(PlayerManager.Instance.IsDead)
+                return;
+            
             if(Vector3.Distance(PlayerManager.Instance.Player.position, triggerPoint.position) > enemyTriggerRange) 
                 return;
             
