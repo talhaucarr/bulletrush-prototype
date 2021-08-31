@@ -11,8 +11,7 @@ namespace Character.Player
     {
         [SerializeField] private Transform sphere;
         [SerializeField] private float skillSpeed;
-       
-
+        
         private float _scaleMultiplier = 1;
         private Vector3 _originalScale;
         private Vector3 _destinationScale;
@@ -30,7 +29,8 @@ namespace Character.Player
 
         public void IncreaseScaleMultiplier()
         {
-            _scaleMultiplier += _scaleMultiplier * Time.deltaTime;
+            if(_scaleMultiplier<=25)
+                _scaleMultiplier += _scaleMultiplier * Time.deltaTime;
         }
 
         private IEnumerator ScaleOverTime(Vector3 a, Vector3 b, float time)

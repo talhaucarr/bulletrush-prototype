@@ -14,6 +14,7 @@ namespace Character.Combat
         [SerializeField] private float bulletSpeed;
         
         [SerializeField] private float fireRate;
+        [SerializeField] private float attackRange;
 
         private bool _allowFire = true;
         private Transform _targetedEnemy = null;
@@ -22,6 +23,9 @@ namespace Character.Combat
         {
             if (EnemyManager.Instance.AreEnemiesDead())
                 return;
+
+            if (!EnemyManager.Instance.HasTargetInRange(transform.position, attackRange))
+                return;;
           
             _targetedEnemy = EnemyManager.Instance.ClosestTarget(transform.position, 0);
             

@@ -1,29 +1,40 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Character.Combat;
 using UnityEngine;
 using UnityEngine.AI;
 using Core;
 using Character.Enemy;
+using Managers;
 
 namespace Character.Enemy
 {
     public class TriggerEnemies : MonoBehaviour
     {
         [SerializeField] private GameObject[] enemies;
+        [SerializeField] private float enemyTriggerRange;
+        [SerializeField] private Transform triggerPoint;
 
-        private BoxCollider _collider;
-
-        private void Start()
+        private bool _isTriggered = false;
+        
+        private void Update()
         {
-            _collider = GetComponent<BoxCollider>();
+            if(Vector3.Distance(PlayerManager.Instance.Player.position, triggerPoint.position) > enemyTriggerRange) 
+                return;
+            
+            if(_isTriggered)
+                return;
+            
+            TriggerAllEnemies();
         }
 
-        private void OnTriggerEnter(Collider other)
+        /*private void OnTriggerEnter(Collider other)
         {
             _collider.enabled = false;
             if(other.gameObject.GetComponent<TagSystem>().Tags.Contains(Tags.Player))
                 TriggerAllEnemies();
-        }
+        }*/
 
         private void TriggerAllEnemies()
         {
@@ -31,6 +42,8 @@ namespace Character.Enemy
             {
                 enemy.GetComponent<AIController>().enabled = true;
             }
+
+            _isTriggered = true;
         }
     }
 }

@@ -37,8 +37,8 @@ namespace Character.Player
             if (!hasHit)
                 return;
 
-            /*if(Input.GetMouseButton(0))
-                _movementModule.MoveTo(hit.point);   */
+            if(Input.GetMouseButton(0))
+                _movementModule.MoveTo(hit.point);
 
         }
 

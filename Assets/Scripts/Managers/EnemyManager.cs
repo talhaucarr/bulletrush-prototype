@@ -20,6 +20,15 @@ namespace Managers
                     Vector2.Distance(tempPoint, new Vector2(b.transform.position.x, b.transform.position.z))));
             return Enemies[order];
         }
+        
+        public bool HasTargetInRange(Vector3 position, float range)
+        {
+            for (int i = Enemies.Count-1; i > -1; i--)
+            {
+                if (Vector3.Distance(Enemies[i].position, position) < range) return true;
+            }
+            return false;
+        }
 
         public void DeathEnemy(Transform currentEnemy)
         {
