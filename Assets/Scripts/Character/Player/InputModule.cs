@@ -10,37 +10,60 @@ namespace Character.Player
 {
     public class InputModule : MonoBehaviour
     {
+        [SerializeField] private Transform sphere;
         [SerializeField] private Camera camera;
-        [SerializeField] private Transform tas;
+              
         private IMovementModule _movementModule;
+        private ISkillModule _skillModule;
 
         private void Start()
         {
             _movementModule = GetComponent<MovementModule>();
+            _skillModule = GetComponent<SkillModule>();
         }
 
         private void Update()
         {
-            MoveToMousePos();
+            MovementInput();
+            SkillInput();
         }
 
-        private void MoveToMousePos()
+        private void MovementInput()
         {
             Ray ray = GetMouseRay();
             bool hasHit = Physics.Raycast(ray, out RaycastHit hit);
-            
-            if(!hasHit)
+
+            if (!hasHit)
                 return;
-            
-            if(Input.GetMouseButton(0))
-                _movementModule.MoveTo(hit.point);
-            
+
+            /*if(Input.GetMouseButton(0))
+                _movementModule.MoveTo(hit.point);*/          
+
+        }
+
+        private void SkillInput()
+        {
+            if (Input.GetMouseButton(0))
+            {
+                Debug.Log("Tiklanmaya baslandi");
+                _skillModule.IncreaseScaleMultiplier();
+            }
+                
+
+            if (Input.GetMouseButtonUp(0))
+            {
+                Debug.Log("Tiklanma birakildi");
+                _skillModule.IncreaseScale();
+            }
+                
         }
 
         private Ray GetMouseRay()
         {
             return camera.ScreenPointToRay(Input.mousePosition);
         }
+
+
     }
 }
 

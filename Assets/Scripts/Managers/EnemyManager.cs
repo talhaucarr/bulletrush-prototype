@@ -12,11 +12,12 @@ namespace Managers
         public Transform ClosestTarget(Vector3 point, int order)
         {
             if (Enemies == null) return null;
-            Vector2 pointXZ = new Vector2(point.x, point.z);
+
+            Vector2 tempPoint = new Vector2(point.x, point.z);
             Enemies.Sort((a, b) => Vector2
-                .Distance(pointXZ, new Vector2(a.transform.position.x, a.transform.position.z))
+                .Distance(tempPoint, new Vector2(a.transform.position.x, a.transform.position.z))
                 .CompareTo(
-                    Vector2.Distance(pointXZ, new Vector2(b.transform.position.x, b.transform.position.z))));
+                    Vector2.Distance(tempPoint, new Vector2(b.transform.position.x, b.transform.position.z))));
             return Enemies[order];
         }
 
