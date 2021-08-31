@@ -37,7 +37,7 @@ namespace Character.Player
                 return;
 
             /*if(Input.GetMouseButton(0))
-                _movementModule.MoveTo(hit.point);*/          
+                _movementModule.MoveTo(hit.point);   */
 
         }
 

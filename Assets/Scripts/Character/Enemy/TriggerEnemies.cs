@@ -19,7 +19,8 @@ public class TriggerEnemies : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         _collider.enabled = false;
-         TriggerAllEnemies();
+        if(other.gameObject.GetComponent<TagSystem>().Tags.Contains(Tags.Player))
+            TriggerAllEnemies();
     }
 
     private void TriggerAllEnemies()

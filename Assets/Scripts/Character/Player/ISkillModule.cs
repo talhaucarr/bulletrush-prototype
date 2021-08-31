@@ -9,7 +9,6 @@ namespace Character.Player
         void IncreaseScaleMultiplier();
         void IncreaseScale();
 
-        void DecreaseScale();
     } 
 }
 

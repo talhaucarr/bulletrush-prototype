@@ -24,6 +24,7 @@ namespace Managers
         public void DeathEnemy(Transform currentEnemy)
         {
             Enemies.Remove(currentEnemy);
+            Destroy(currentEnemy.gameObject);
         }
 
         public bool AreEnemiesDead()

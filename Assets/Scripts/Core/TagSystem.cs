@@ -11,6 +11,7 @@ namespace Core
         Enemy,
         None,
         Bullet,
+        Skill,
     }
     public class TagSystem : MonoBehaviour
     {

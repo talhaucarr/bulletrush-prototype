@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Core;
+using Managers;
 
 namespace Character.Player
 {
@@ -12,6 +15,7 @@ namespace Character.Player
 
         private float _scaleMultiplier = 1;
         private Vector3 _originalScale;
+        private Vector3 _destinationScale;
 
         private void Start()
         {
@@ -20,7 +24,8 @@ namespace Character.Player
 
         public void IncreaseScale()
         {
-            StartCoroutine(ScaleOverTime(skillSpeed));
+            _destinationScale = new Vector3(_scaleMultiplier, _scaleMultiplier, _scaleMultiplier);
+            StartCoroutine(ScaleOverTime(_originalScale,_destinationScale,skillSpeed));
         }
 
         public void IncreaseScaleMultiplier()
@@ -29,26 +34,33 @@ namespace Character.Player
             _scaleMultiplier += _scaleMultiplier * Time.deltaTime;
         }
 
-        public void DecreaseScale()
+        private IEnumerator ScaleOverTime(Vector3 a, Vector3 b, float time)
         {
-            sphere.localScale = _originalScale;
-        }
-        
-
-        private IEnumerator ScaleOverTime(float time)
-        {           
-            Vector3 destinationScale = new Vector3(_scaleMultiplier, _scaleMultiplier, _scaleMultiplier);
-
             float currentTime = 0.0f;
 
             do
             {
-                sphere.localScale = Vector3.Lerp(_originalScale, destinationScale, currentTime / time);  
+                sphere.localScale = Vector3.Lerp(_originalScale, _destinationScale, currentTime / time);  
                 currentTime += Time.deltaTime;
                 yield return null;
             } while (currentTime <= time);
 
+            BackToOld();
+        }
 
+        private void BackToOld()
+        {
+            _scaleMultiplier = 1;
+            sphere.localScale = _originalScale;
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (!other.gameObject.GetComponent<TagSystem>().Tags.Contains(Tags.Enemy))
+                return;
+            
+            EnemyManager.Instance.DeathEnemy(other.transform);
+            
         }
     }
 }
