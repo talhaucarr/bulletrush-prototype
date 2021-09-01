@@ -543,7 +543,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8471402615219703353, guid: 74c9c098e4832484bacd4f1fc0bc0445, type: 3}
       propertyPath: enemyTriggerRange
-      value: 35
+      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74c9c098e4832484bacd4f1fc0bc0445, type: 3}
@@ -703,9 +703,9 @@ MonoBehaviour:
     roll: 0
   - position: {x: -25.197886, y: 2.3239093, z: -76.275}
     roll: 0
-  - position: {x: -56.123787, y: -0.51450586, z: -70.04932}
+  - position: {x: -65.78347, y: -0.51450586, z: -70.04932}
     roll: 0
-  - position: {x: -53.376915, y: -3.352921, z: -31.917927}
+  - position: {x: -65.33264, y: -3.352921, z: -31.917927}
     roll: 0
 --- !u!1001 &546245344
 PrefabInstance:
@@ -720,7 +720,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1441723371910075026, guid: 74c9c098e4832484bacd4f1fc0bc0445, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -32.681393
+      value: -24.4
       objectReference: {fileID: 0}
     - target: {fileID: 1441723371910075026, guid: 74c9c098e4832484bacd4f1fc0bc0445, type: 3}
       propertyPath: m_LocalPosition.y
@@ -764,7 +764,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8471402615219703353, guid: 74c9c098e4832484bacd4f1fc0bc0445, type: 3}
       propertyPath: enemyTriggerRange
-      value: 35
+      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74c9c098e4832484bacd4f1fc0bc0445, type: 3}
@@ -960,7 +960,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1265625979221539596, guid: 60dd7674b7cdb52458fbe9b676187e83, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -37.57
+      value: -45
       objectReference: {fileID: 0}
     - target: {fileID: 1265625979221539596, guid: 60dd7674b7cdb52458fbe9b676187e83, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1000,7 +1000,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4712981027633837444, guid: 60dd7674b7cdb52458fbe9b676187e83, type: 3}
       propertyPath: m_Speed
-      value: 7.5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4712981027633837447, guid: 60dd7674b7cdb52458fbe9b676187e83, type: 3}
       propertyPath: camera
@@ -1459,7 +1459,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085929492}
   m_LocalRotation: {x: 0.20490834, y: 0.6767663, z: -0.20490834, w: 0.6767663}
-  m_LocalPosition: {x: -50.113976, y: 19.715412, z: 2.3516521}
+  m_LocalPosition: {x: -57.543976, y: 19.715412, z: 2.3516521}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2098500268}
@@ -1923,7 +1923,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1742541187}
   m_LocalRotation: {x: 0.20490834, y: 0.6767663, z: -0.20490834, w: 0.6767663}
-  m_LocalPosition: {x: -50.113976, y: 19.715412, z: 2.3516521}
+  m_LocalPosition: {x: -57.543976, y: 19.715412, z: 2.3516521}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1838513763}
@@ -2052,7 +2052,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8471402615219703353, guid: 74c9c098e4832484bacd4f1fc0bc0445, type: 3}
       propertyPath: enemyTriggerRange
-      value: 35
+      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74c9c098e4832484bacd4f1fc0bc0445, type: 3}
@@ -2201,7 +2201,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1441723371910075026, guid: 74c9c098e4832484bacd4f1fc0bc0445, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -38.39139
+      value: -30.27
       objectReference: {fileID: 0}
     - target: {fileID: 1441723371910075026, guid: 74c9c098e4832484bacd4f1fc0bc0445, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2249,7 +2249,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8471402615219703353, guid: 74c9c098e4832484bacd4f1fc0bc0445, type: 3}
       propertyPath: enemyTriggerRange
-      value: 35
+      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74c9c098e4832484bacd4f1fc0bc0445, type: 3}
