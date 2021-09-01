@@ -310,7 +310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1604148185409507636}
   bulletPrefab: {fileID: 1407074524288474152, guid: 3bed594ec9da78b4fa8691a3310584dc, type: 3}
-  bulletSpeed: 30
+  bulletSpeed: 40
   fireRate: 0.3
   attackRange: 25
 --- !u!114 &2566642790954253295
@@ -439,7 +439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 4992325635808609883}
   bulletPrefab: {fileID: 1407074524288474152, guid: 3bed594ec9da78b4fa8691a3310584dc, type: 3}
-  bulletSpeed: 30
+  bulletSpeed: 40
   fireRate: 0.1
   attackRange: 25
 --- !u!114 &6164373765709328319
@@ -470,7 +470,6 @@ GameObject:
   - component: {fileID: 4712981027633837447}
   - component: {fileID: 4712981027633837448}
   - component: {fileID: 4712981027633837449}
-  - component: {fileID: 781830203}
   - component: {fileID: 1119073212}
   m_Layer: 0
   m_Name: Player
@@ -537,7 +536,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -588,21 +587,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tags: 01000000
---- !u!114 &781830203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6994305138309559202}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c867676796098cc47a7d6b710209caca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  body: {fileID: 175676339728128242}
-  rightHand: {fileID: 8003375202353790432}
-  leftHand: {fileID: 6804574233350617182}
 --- !u!114 &1119073212
 MonoBehaviour:
   m_ObjectHideFlags: 0
